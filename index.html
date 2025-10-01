@@ -123,10 +123,19 @@
       Ya podés usar la app normalmente.
     </div>
     <a class="btn" href="#" tabindex="0">Descargar la app</a>
+    <div id="open-app" style="display:none; margin-top:18px;">
+      <a class="btn" href="papelito://" style="background:#22c55e;">Abrir en la app</a>
+    </div>
     <div style="margin-top:18px; color:#AAA; font-size:0.95em; text-align:center;">
       Si ya tenés la app instalada, podés cerrarla y volver a abrirla.<br>
       <span style="font-size:0.85em;">© 2024 Papelito</span>
     </div>
   </div>
+  <script>
+    // Detecta si es mobile
+    if (/android|iphone|ipad|ipod/i.test(navigator.userAgent)) {
+      document.getElementById('open-app').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
